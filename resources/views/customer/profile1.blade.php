@@ -13,14 +13,14 @@
         <a class="navbar-brand" href="{{route('customer.custhome')}}">
             <img src="https://unitech.nyc/wp-content/uploads/2017/10/LogoUnitech01.png" alt="" width="30" height="24" class="d-inline-block align-top">
             Home
-          </a>   
+          </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="...">Orders</a>
+            <a class="nav-link active" aria-current="page" href="{{route('order')}}">Orders</a>
           </li>
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="{{route('customer.product1')}}">Products</a>
@@ -30,6 +30,9 @@
           </li>
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="{{route('customer.experts')}}">Experts</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{{route('cartlist')}}">Cart</a>
           </li>
         </ul>
           <form class="d-flex">
@@ -46,7 +49,7 @@
         <div class="row">
            <div class="col-md-4 col-md-offset-4"></div>
             <div class="col-md-4 col-md-offset-4">
-            <form action="/customer/fupdate" methods="post" >
+            <form action="/customer/fupdate" method="post" >
             {{csrf_field()}}
             @if(Session::get('success'))
             <div class="alert alert-success">
@@ -60,7 +63,7 @@
             @endif
             <h4><center> Customer Profile</center></h4><hr>
             <table class="table table-borderless">
-            <input type="hidden" name="id" value="{{ $LoggedUserInfo['id'] }}" >
+            <input type="text" name="id" value="{{ $LoggedUserInfo['id'] }}" hidden>
             <tr>
               <td>Name</td>
               <td><input type="text" class="form-control" name="name"  value="{{ $LoggedUserInfo['name'] }} ">
@@ -87,7 +90,6 @@
             </tr>
             </table>
         </div>
-   </div> 
+   </div>
 </body>
 </html>
-

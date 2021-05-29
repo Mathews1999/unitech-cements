@@ -13,7 +13,7 @@
         <a class="navbar-brand" href="{{route('customer.custhome')}}">
             <img src="https://unitech.nyc/wp-content/uploads/2017/10/LogoUnitech01.png" alt="" width="30" height="24" class="d-inline-block align-top">
             Home
-          </a>   
+          </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -45,29 +45,47 @@
       </div>
     </div>
   </nav>
-  <div class="container">
-        <div class="row"style="margin-top:45px">
-        <div class="col-md-4 col-md-offset-4"></div>
-        <div class="col-md-4 col-md-offset-4">
-                <div class="card text-white bg-success mb-3" style="max-width: 23rem;">
-                    <div class="card-header"><h1>Architecture</h1></div>
-                    <div class="card-body">
-                        <p class="card-text"><h6>Sajan Varghese
-                            <br>House no:24, Maharaj Villa, 
-                        <br>Ahura Centre Mahakali Caves Road,
-                        <br>Andheri (East) Mumbai 400 093, India. <br><br> Email  :sajan123@gmail.com
-                       <br><br>
-                       <br><br>PhoneNo :+91 982571234
-                       <br><br>Landline:+544 45966971</h6>
-                    </div>
-                    </div>
-                </div>
-                </div>
-               </div>
-               </div>
-        </div>
-    </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>    
-  </body>
-  </html>
+  <h4><center>Order Summary</center></h4>
+ <br>
+<div class="container">
+<div class="row ">
+
+<div  class="col col-12 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
+</div>
+<div  class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+<table class="table table-striped table-secondary">
+    
+      <tr>
+        <td>Amount</td>
+        <td>{{$sum}}</td>
+      </tr>
+      <tr>
+        <td>GST</td>
+        <td>50</td>
+      </tr>
+      <tr>
+        <td>Delivery Charge</td>
+        <td>300</td>
+      </tr>
+      <tr>
+        <td>Total Amount</td>
+        <td>{{$sum+350}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <form action="/orderplace" method="post">
+      {{csrf_field()}}
+  
+  <div class="form-group"><br>
+    <label for="pwd">Select a payment method</label><br>
+    <input type="radio" value="card" name="payment"  required>&nbsp;&nbsp;<span>Debit/Credit card</span><br>
+    <input type="radio" value="cod" name="payment"  required>&nbsp;&nbsp;<span>Cash On delivery</span><br><br>
+    <center> <button type="submit" class="btn btn-primary">Order Now</button></center>
+</form>
+  </div>
+ </div>
+ </div>
+ <div  class="col col-12 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
+</div>

@@ -20,9 +20,14 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="...">Orders</a>
+            <a class="nav-link active" aria-current="page" href="/vieworders">Orders</a>
           </li>
-        
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/viewfeedback">View Feedbacks</a>
+          </li>
+                <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{{route('company.profile')}}">Profile</a>
+          </li>         
         </ul>
           <form class="d-flex">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -42,21 +47,21 @@
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="public\Pictures\img6.jpg" class="d-block w-100" alt="..." width="500" height="600">
+      <img src="https://i.pinimg.com/originals/e4/3d/a7/e43da771139d98fc447a2bcf7368e768.jpg" class="d-block w-100" alt="..." width="500" height="600">
       <div class="carousel-caption d-none d-md-block">
         <h5>First slide label</h5>
         <p>Some representative placeholder content for the first slide.</p>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="public\Pictures\img4.jpg" class="d-block w-100" alt="..."width="500" height="600">
+      <img src="https://constructionblog.autodesk.com/wp-content/uploads/2020/11/office-and-field-communication-in-construction.jpg" class="d-block w-100" alt="..."width="500" height="600">
       <div class="carousel-caption d-none d-md-block">
         <h5>Second slide label</h5>
         <p>Some representative placeholder content for the second slide.</p>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="public\Pictures\img5.jpg" class="d-block w-100" alt="..."width="500" height="600">
+      <img src="https://mk0ediweeklycommok1n.kinstacdn.com/wp-content/uploads/2014/08/wood-construction-Canada-buildings-fire-code-safety-sprinklers-emergency-Condo.ca_.jpg" class="d-block w-100" alt="..."width="500" height="600">
       <div class="carousel-caption d-none d-md-block">
         <h5>Third slide label</h5>
         <p>Some representative placeholder content for the third slide.</p>

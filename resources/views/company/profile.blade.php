@@ -20,13 +20,17 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="...">Orders</a>
+            <a class="nav-link active" aria-current="page" href="/vieworders">Orders</a>
           </li>
         
-        <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{{route('customer.profile1')}}">Profile</a>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/viewfeedback">View Feedbacks</a>
           </li>
-          
+
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{{route('company.profile')}}">Profile</a>
+          </li>
+         
         </ul>
           <form class="d-flex">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -42,7 +46,7 @@
         <div class="row">
            <div class="col-md-4 col-md-offset-4"></div>
             <div class="col-md-4 col-md-offset-4">
-            <form action="/compupdate" methods="post" enctype="multipart/form-data">
+            <form action="/company/aupdate" method="post" >
             {{csrf_field()}}
 
             @if(Session::get('success'))
@@ -57,6 +61,8 @@
             @endif
             <h4><center> Company Profile</center></h4><hr>
             <table class="table table-borderless">
+            
+            <input type="text" name="id" value="{{ $LoggedUserInfo['id'] }}" hidden>
             <tr>
               <td>Company Name</td>
               <td><input type="text" class="form-control" name="companyname" placeholder="Enter Company Name" value="{{ $LoggedUserInfo['companyname'] }} ">
@@ -95,6 +101,7 @@
             <div class="col-md-4 col-md-offset-4"></div>
         </div>
    </div> 
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>    
 </body>
 </html>
 

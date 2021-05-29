@@ -59,31 +59,35 @@
   <div class="container">
     <div class="row">
         <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-            <table class="table table-borderless" >
-              <tr>
-                  <td><h1><u>Enquiry/Feedback</u></h1></td>
-              </tr>
+          <h1><u>Enquiry/Feedback</u></h1>
+          <form action="/contactread" method="post">
+          {{csrf_field() }}
+          <table class="table table-borderless" >
+              
               <tr>
                   <td>Name</td>
-                  <td><input type="text" class="form-control"></td>
+                  <td><input name="fname" type="text" class="form-control"></td>
               </tr>
               <tr>
                   <td>Email</td>
-                  <td><input type="text" class="form-control"></td>
+                  <td><input name="femail" type="text" class="form-control"></td>
               </tr>
               <tr>
                   <td>Contact No</td>
-                  <td><input type="text" class="form-control"></td>
+                  <td><input name="fcontactno" type="text" class="form-control"></td>
               </tr>
               <tr>
                   <td>Enquiry/feedback</td>
-                  <td><textarea id="w3review" name="w3review" rows="4" cols="30"></textarea></td>
+                  <td><textarea name="ffeedback" id="w3review" class="form-control" name="w3review" rows="4" cols="30"></textarea></td>
               </tr>
               <tr>
                   <td></td>
                   <td><button class="btn btn-success">Submit</button></td>
               </tr>
             </table>
+          
+          </form>
+            
         </div>
         
         <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
