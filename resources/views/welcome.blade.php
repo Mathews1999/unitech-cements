@@ -27,6 +27,7 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                       <li><a class="dropdown-item" href="{{route('auth.custregister')}}">Customer Reg</a></li>
+                      <li><a class="dropdown-item" href="{{route('auth.compregister')}}">Admin Reg</a></li>
                     </ul>
             </ul>
         </form>
